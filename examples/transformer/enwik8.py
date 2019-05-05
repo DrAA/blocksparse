@@ -136,7 +136,7 @@ def transformer_block(x, scope, train=False):
 
         # fast_gelu: x * sigmoid(1.702 * x)
         m = conv1d(m, 'proj_m1', n_state * hps.mlp_ratio, fast_gelu=True)
-        m = conv1d(m, 'proj_m2', n_state)
+        m = conv1d(m, 'proj_m2', n_state) 
 
         if train and hps.resid_pdrop > 0.0:
             # preserve the dropout mask through recompute
@@ -402,6 +402,11 @@ if __name__ == '__main__':
 
                 if hps.profile and iteration >= hps.profile:
                     exit()
+
+                if iteration == 10:
+                    exit()
+                else:
+                    print(f'Iteration {iteration}')
 
 
             print_rank0('Calculating validation loss')

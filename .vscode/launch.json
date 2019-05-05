@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "enwik8",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/anders/peltarion/blocksparse/examples/transformer/enwik8.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--enwik8_path=/var/tmp/lasse/data/enwik8",
+                "--recompute=1",
+                "--float16=1",
+                "--n_batch=420"
+            ]
+        }
+    ]
+}
